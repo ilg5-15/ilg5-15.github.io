@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="utf-8" />
@@ -6,162 +6,249 @@
   <title>Energia Girasole - Offerte Luce e Gas</title>
   <meta name="description" content="Risparmia fino al 30% sulla bolletta luce e gas. Inserisci nome e numero: ti richiamiamo gratis per una consulenza personalizzata." />
   <style>
-    :root{
-      --blue-600:#1565c0;
-      --blue-800:#0d47a1;
-      --bg:#eaf4ff;
-      --card:#ffffff;
-      --accent:#f7c948; /* giallo girasole */
-      --muted:#666;
-      --radius:14px;
+    :root {
+      --blue-600: #1565c0;
+      --blue-800: #0d47a1;
+      --bg: #eaf4ff;
+      --card: #ffffff;
+      --accent: #f7c948;
+      --muted: #666;
+      --radius: 14px;
       font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
+    * { box-sizing: border-box }
+    body {
+      margin: 0;
       background: linear-gradient(180deg, var(--bg), #d9eefc 80%);
-      color:var(--blue-800);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:28px;
+      color: var(--blue-800);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 28px;
     }
 
-    .wrap{
-      max-width:1000px;
-      margin:0 auto;
-      display:grid;
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
       grid-template-columns: 1fr 420px;
-      gap:28px;
-      align-items:start;
+      gap: 28px;
+      align-items: start;
     }
 
-    /* mobile stack */
-    @media (max-width:920px){ .wrap{ grid-template-columns: 1fr; padding-bottom:30px } }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:18px;
+    @media (max-width:920px) {
+      .wrap {
+        grid-template-columns: 1fr;
+        padding-bottom: 30px;
+      }
     }
-    .brand img{ height:56px; width:auto; border-radius:6px; background:white; padding:6px }
-    .brand h1{ margin:0; font-size:20px; letter-spacing:0.2px; color:var(--blue-800) }
 
-    .hero{
-      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .brand img {
+      height: 56px;
+      width: auto;
+      border-radius: 6px;
+      background: white;
+      padding: 6px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+      color: var(--blue-800);
+    }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95));
       border-radius: var(--radius);
-      padding:26px;
-      box-shadow: 0 10px 30px rgba(13,71,161,0.06);
-    }
-    .hero h2{ margin:0 0 8px 0; font-size:28px; color:var(--blue-800) }
-    .hero p.lead{ margin:0 0 18px 0; color:var(--muted) }
-
-    .cta{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      margin-bottom:8px;
-      flex-wrap:wrap;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(13, 71, 161, 0.06);
     }
 
-    .badge{
-      background:linear-gradient(90deg,var(--accent),#ffd36b);
-      color:#0b2542;
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    .hero h2 {
+      margin: 0 0 8px 0;
+      font-size: 28px;
+      color: var(--blue-800);
     }
 
-    /* form card */
-    .form-card{
-      background:var(--card);
-      padding:20px;
-      border-radius:12px;
-      box-shadow: 0 12px 30px rgba(13,71,161,0.06);
-      border: 1px solid rgba(13,71,161,0.04);
+    .hero p.lead {
+      margin: 0 0 18px 0;
+      color: var(--muted);
     }
-    label{ display:block; font-size:13px; color:var(--blue-800); margin-bottom:6px; font-weight:600 }
-    input[type="text"], input[type="tel"], input[type="email"]{
-      width:100%;
-      padding:12px 14px;
-      border-radius:10px;
-      border:1px solid #d7e7fb;
-      font-size:15px;
-      margin-bottom:12px;
-    }
-    .row { display:flex; gap:10px }
-    .row .col{ flex:1 }
 
-    button.primary{
-      width:100%;
-      padding:12px 14px;
-      background:var(--blue-600);
-      color:#fff;
-      font-weight:700;
-      border:0;
-      border-radius:10px;
-      cursor:pointer;
-      font-size:16px;
+    .cta {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
     }
-    button.primary:hover{ background:var(--blue-800) }
 
-    small.privacy{
-      display:block;
-      margin-top:10px;
-      color:#555;
-      font-size:12px;
-      line-height:1.3;
+    .badge {
+      background: linear-gradient(90deg, var(--accent), #ffd36b);
+      color: #0b2542;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     }
-    .privacy a{ color:var(--blue-800); text-decoration:none; font-weight:600 }
-    .privacy a:hover{text-decoration:underline}
 
-    /* right side: offer card */
-    .offer{
-      background:linear-gradient(180deg,#ffffff, #fbfffe);
+    .form-card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(13, 71, 161, 0.06);
+      border: 1px solid rgba(13, 71, 161, 0.04);
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      color: var(--blue-800);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    input[type="text"], input[type="tel"], input[type="email"] {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #d7e7fb;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .row .col {
+      flex: 1;
+    }
+
+    button.primary {
+      width: 100%;
+      padding: 12px 14px;
+      background: var(--blue-600);
+      color: #fff;
+      font-weight: 700;
+      border: 0;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button.primary:hover {
+      background: var(--blue-800);
+    }
+
+    small.privacy {
+      display: block;
+      margin-top: 10px;
+      color: #555;
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .privacy a {
+      color: var(--blue-800);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .privacy a:hover {
+      text-decoration: underline;
+    }
+
+    .offer {
+      background: linear-gradient(180deg, #ffffff, #fbfffe);
       border-radius: var(--radius);
-      padding:20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-      text-align:center;
-      border: 1px solid rgba(0,0,0,0.03);
-    }
-    .offer .icon{
-      width:72px; height:72px; margin:0 auto 12px auto;
-      border-radius:50%;
-      background:linear-gradient(180deg,var(--accent),#ffd36b);
-      display:flex; align-items:center; justify-content:center;
-      font-size:34px; color:#123;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-    }
-    .offer h3{ margin:6px 0 12px 0; font-size:20px; color:var(--blue-800) }
-    .offer p{ margin:0 0 12px 0; color:var(--muted) }
-
-    .big{
-      font-weight:800;
-      font-size:20px;
-      margin-top:6px;
-      color:var(--blue-800);
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.03);
     }
 
-    .accent-text{ color:#c2185b; font-weight:700; font-size:16px; margin:10px 0 }
+    .offer .icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 12px auto;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--accent), #ffd36b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      color: #123;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    }
 
-    .small-muted{ color:#444; font-size:14px; margin-top:10px; line-height:1.4 }
+    .offer h3 {
+      margin: 6px 0 12px 0;
+      font-size: 20px;
+      color: var(--blue-800);
+    }
 
-    /* list style */
-    .offer .list{ text-align:left; margin-top:14px; padding:10px 16px; border-radius:10px; background: linear-gradient(180deg, #fbfffe, #ffffff); }
-    .offer .list li{ margin:10px 0; font-weight:600 }
+    .offer p {
+      margin: 0 0 12px 0;
+      color: var(--muted);
+    }
 
-    footer.note{ margin-top:20px; font-size:12px; color:#555; text-align:center }
+    .big {
+      font-weight: 800;
+      font-size: 20px;
+      margin-top: 6px;
+      color: var(--blue-800);
+    }
 
+    .accent-text {
+      color: #c2185b;
+      font-weight: 700;
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .small-muted {
+      color: #444;
+      font-size: 14px;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    .offer .list {
+      text-align: left;
+      margin-top: 14px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #fbfffe, #ffffff);
+    }
+
+    .offer .list li {
+      margin: 10px 0;
+      font-weight: 600;
+    }
+
+    footer.note {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #555;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <main class="wrap" role="main">
     <section>
       <div class="brand">
-        <!-- Sostituisci src con il tuo logo: es. logo.png -->
-        <img src="logo-italia-gas-e-luce.png" alt="Logo Energia Girasole / Italia Gas e Luce (sostituisci immagine)" />
+        <img src="logo-italia-gas-e-luce.png" alt="Logo Energia Girasole / Italia Gas e Luce" />
         <div>
           <h1>Energia Girasole</h1>
           <div style="color:var(--muted); font-size:13px;">Offerte luce e gas — consulenza gratuita</div>
@@ -177,7 +264,7 @@
         <p class="lead">Inserisci il tuo nome e numero di telefono e ti richiamiamo gratis per una consulenza personalizzata.</p>
 
         <div class="form-card" aria-label="Modulo richiesta richiamata">
-          <form action="salva.php" method="post" id="leadForm">
+          <form action="https://formspree.io/f/mgvnzvep" method="POST" id="leadForm">
             <label for="nome">Nome</label>
             <input id="nome" name="nome" type="text" placeholder="Il tuo nome (facoltativo)" maxlength="80">
 
@@ -217,7 +304,6 @@
       </div>
     </section>
 
-    <!-- OFFERTA CARD -->
     <aside>
       <div class="offer" aria-labelledby="off-title">
         <div class="icon">🌻</div>
@@ -243,16 +329,13 @@
   </main>
 
   <script>
-    // semplice validazione e alert di conferma (non sostituisce il backend)
     document.getElementById('leadForm').addEventListener('submit', function(e){
       const tel = document.getElementById('telefono').value.trim();
-      if(!tel || tel.length < 6){
+      if (!tel || tel.length < 6) {
         e.preventDefault();
         alert('Inserisci un numero di telefono valido.');
         return false;
       }
-      // opzionale: mostrare una piccola conferma in pagina prima del submit
-      // lasciamo che il form venga inviato al server (salva.php)
     });
   </script>
 </body>
